@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="activitats.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Section for list -->
+    <div id="separator">Activitat01.html</div>
+    <div id="llista_propietats"></div>
+
+        <!-- Section for audio player -->
+        <div id="audio-player">
+            <!-- Volume control -->
+            <label for="volume">Volume:</label>
+            <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5" class="volume-control">
+            
+            <!-- Time control -->
+            <label for="progress">Time:</label>
+            <input type="range" id="progress" min="0" step="0.1" value="0" class="time-control">
+            <span id="duration"></span>
+    
+            <!-- Audio controls -->
+            <div class="controls">
+                <button onclick="playAudio()">PLAY</button>
+                <button onclick="stopAudio()">STOP</button>
+                <button onclick="pauseAudio()">PAUSE</button>
+                <button onclick="muteAudio()">MUTE</button>
+                <button onclick="volumeUp()">VOL+</button>
+                <button onclick="volumeDown()">VOL-</button>
+            </div>
+    
+            <!-- Audio selector -->
+            <select id="audio-selector" onchange="changeAudio()">
+                <option value="song1.mp3">When you were young</option>
+                <option value="song2.mp3">Sunlit Earth</option>
+            </select>
+        <audio id="audio"></audio>
+        </div>
+    <!-- section for taula -->
+    <div id="separator">Activitat02.html</div>
+         <div id="taula_propietats"></div>
+
+    <!-- Section Timer -->
+    <div id="timer">
+        <!-- Show timer -->
+        <div id="timer-display">00:00</div>
+        
+        <!-- Inputs for minutes and seconds -->
+        <label for="minutes">Minuts:</label>
+        <input type="number" id="minutes" min="0" value="0">
+        <label for="seconds">Segons:</label>
+        <input type="number" id="seconds" min="0" max="59" value="0">
+        
+        <!-- Controls -->
+        <button onclick="startTimer()">Iniciar</button>
+        <button onclick="pauseTimer()">Pausar</button>
+        <button onclick="resetTimer()">Restablir</button>
+    </div>
+    
+    <!-- Alert -->
+    <audio id="alarm-sound" src="alarm_sound.mp3"></audio>
+    <div>
+         <!-- Clock -->
+    <div id="clock">00:00:00</div>
+
+    <!-- Alarm config -->
+    <div id="alarm-settings">
+        <label for="alarm-time">Hora de l'alarma (HH:MM:SS):</label>
+        <input type="time" id="alarm-time">
+        <button onclick="setAlarm()">Establir Alarma</button>
+        <button onclick="stopAlarm()">Detindre Alarma</button>
+    </div>
+
+    <!-- Selecció de música y volum -->
+    <div id="alarm-music">
+        <label for="music-select">Selecciona la música:</label>
+        <select id="music-select">
+            <option value="song1.mp3">Música 1</option>
+            <option value="song2.mp3">Música 2</option>
+        </select>
+
+        <label for="volume">Volum:</label>
+        <input type="range" id="volume2" min="0" max="1" step="0.1" value="0.5">
+    </div>
+
+    <!-- Controls -->
+    <div id="music-controls">
+        <button onclick="playMusic()">Reproduir Música</button>
+        <button onclick="stopMusic()">Detenir Música</button>
+    </div>
+
+    <!-- Alarm audio -->
+    <audio id="alarm-sound" src="alarm_sound.mp3"></audio>
+    </div>
+</body>
+</html>
